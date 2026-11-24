@@ -180,6 +180,62 @@
 .lp-bar.travel { background: #3684d8; }
 .lp-bar.bills  { background: #8572dc; }
 
+/* ---------- Video modal ---------- */
+
+.lp-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    background: rgba(15, 15, 15, 0.7);
+}
+
+.lp-modal[hidden] { display: none; }
+
+.lp-modal-box {
+    position: relative;
+    width: 100%;
+    max-width: 860px;
+    background: #000;
+    border-radius: var(--radius-md);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+}
+
+.lp-modal-video {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+}
+
+.lp-modal-video iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.lp-modal-close {
+    position: absolute;
+    top: -2.75rem;
+    right: 0;
+    width: 2.25rem;
+    height: 2.25rem;
+    border: none;
+    border-radius: 50%;
+    background: #fff;
+    color: var(--ink);
+    font-size: 1.5rem;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.lp-modal-close:hover { background: var(--lp-mint, #e6f6ef); }
+
 /* ---------- Responsive ---------- */
 
 @media (max-width: 700px) {
